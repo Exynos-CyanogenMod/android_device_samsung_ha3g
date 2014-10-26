@@ -58,10 +58,8 @@ COMMON_GLOBAL_CFLAGS += -DSAMSUNG_DVFS
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/samsung/ha3g
 TARGET_KERNEL_CONFIG := cm_ha3g_defconfig
-#BOARD_KERNEL_CMDLINE := console=null vmalloc=512M androidboot.console=null user_debug=31
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-#BOARD_MKBOOTIMG_ARGS := --board universal5420 --ramdisk_offset 0x02900000 --tags_offset 0x02700000
 
 # adb has root
 ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0
@@ -136,7 +134,6 @@ BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/etc/fstab.universal5420
-#BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/custombootimg.mk
 
 # SELinux
 BOARD_SEPOLICY_DIRS += \
